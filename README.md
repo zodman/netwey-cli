@@ -15,4 +15,4 @@ netwey-cli
 
 ```
 
-!()[https://i.imgur.com/y2nymJq.png]
+![](https://i.imgur.com/y2nymJq.png)
