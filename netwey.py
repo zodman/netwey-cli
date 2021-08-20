@@ -6,7 +6,7 @@ import click
 import os
 
 colorama.init()
-requests.adapters.DEFAULT_RETRIES = 5
+requests.adapters.DEFAULT_RETRIES = 15
 
 
 @click.command()
@@ -32,7 +32,7 @@ def cli():
         titles = details_root.find_all(class_="item-title-details")
         details = details_root.find_all(class_="item-cont-details")
         progress = details_root.find(class_="l-progress").string
-        v = details_root.find(role="progressbar")["aria-valuenow"]
+        v = int(details_root.find(role="progressbar")["aria-valuenow"])
         print(
             f"{colorama.Fore.GREEN}NETWEY.COM.MX {colorama.Style.DIM} Internet Service"
         )
@@ -49,5 +49,9 @@ def cli():
                     f"{colorama.Style.BRIGHT+colorama.Fore.GREEN} {v}% "
                     f"{colorama.Fore.WHITE}{progress.strip()}"
                 )
+                h = '*'*(50-v//2)
+                x = '*'*(v//2)
+                print(f"{colorama.Fore.MAGENTA+colorama.Back.MAGENTA}{x}"
+                      f"{colorama.Back.BLACK+colorama.Fore.BLACK}{h}{colorama.Style.RESET_ALL}")
     else:
         print(resp.content)
