@@ -6,6 +6,9 @@
 
 # ANVA007
 
+If you want to buy the service it works great at [this places](#places-used),
+and if you like ? use my refer code to bought a device.
+
 ## for install
 
 ```
