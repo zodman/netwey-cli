@@ -29,9 +29,7 @@ netwey-cli
 
 ## Internet Coverage
 
-![https://www.altanredes.com/en/solutions-to-operators/our-coverage/](https://secure.netwey.com.mx/site/img/xmapa_cobertura.png.pagespeed.ic.YOL2TLBpy4.webp)
-
-
+[ ![](https://secure.netwey.com.mx/site/img/xmapa_cobertura.png.pagespeed.ic.YOL2TLBpy4.webp) ]( https://www.altanredes.com/en/solutions-to-operators/our-coverage/)
 ## Places used.
 
 
