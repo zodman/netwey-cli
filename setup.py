@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='netwey-cli',
-    version='0.1.2',
+    version='0.2.0',
     py_modules=['netwey'],
     python_requires='>=3',
     author="Andres Vargas - zodman",

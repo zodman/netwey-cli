@@ -17,13 +17,13 @@ def cli():
         print(f"{colorama.Fore.RED} not NETWEY_EMAIL  or NETWEY_PASSWORD env was set")
         return 
     s = requests.Session()
-    response = s.get("https://secure.netwey.com.mx/site")
+    response = s.get("https://secure.netwey.com.mx/site/login")
     response.raise_for_status()
-    soup = BeautifulSoup(response.content, "html.parser")
-    form_login = soup.find(id="form-login")
+    soup = BeautifulSoup(response.json().get("msg"), "html.parser")
+    form_login = soup.find(id="formlogin")
     token = form_login.find("input", {"name": "_token"})["value"]
     data = {'_token': token, 'dn': email, 'pass': password}
-    resp = s.post("https://secure.netwey.com.mx/site/mi-netwey/login", data)
+    resp = s.post("https://secure.netwey.com.mx/site/mi-netwey/validateLogin", data)
     resp.raise_for_status()
     if resp.json().get("status") == "success":
         resp = s.get("https://secure.netwey.com.mx/site/mi-netwey/mi-cuenta")
